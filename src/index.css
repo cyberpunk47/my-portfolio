@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Space+Mono:wght@400;700&family=Inter:wght@300;400;500&display=swap');
+@import "tailwindcss";
+
+:root {
+  --bg: #0a0a0a;
+  --surface: #111111;
+  --border: #222222;
+  --accent: #e8ff3b;
+  --accent2: #ff3b5c;
+  --text: #f0f0f0;
+  --muted: #555555;
+  --nav-bg: rgba(10,10,10,0.85);
+  --font-mono: 'Space Mono', monospace;
+  --font-display: 'Bebas Neue', cursive;
+  --font-body: 'Inter', sans-serif;
+}
+
+[data-theme="light"] {
+  --bg: #f8f7f4;
+  --surface: #ffffff;
+  --border: #c8c4ba;
+  --accent: #2563eb;
+  --accent2: #dc2626;
+  --text: #111111;
+  --muted: #5a5a5a;
+  --nav-bg: rgba(248,247,244,0.92);
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  transition: background-color 0.3s ease, color 0.3s ease;
+  overflow-x: hidden;
+  cursor: none;
+}
+
+/* ─── Custom cursor ─── */
+.cursor-dot {
+  width: 12px; height: 12px;
+  background: var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9999;
+  transition: transform 0.1s ease, width 0.2s, height 0.2s;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+}
+.cursor-ring {
+  width: 36px; height: 36px;
+  border: 1px solid var(--accent);
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  z-index: 9998;
+  transition: transform 0.15s ease, width 0.2s, height 0.2s;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+}
+.cursor-dot.hovering { width: 20px; height: 20px; }
+.cursor-ring.hovering { width: 56px; height: 56px; }
+
+/* ─── Noise overlay ─── */
+.noise-overlay {
+  position: fixed; inset: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 9000;
+  opacity: 0.4;
+}
+
+/* ─── Glitch text effect ─── */
+.glitch-text {
+  position: relative;
+  display: inline-block;
+}
+.glitch-text::before,
+.glitch-text::after {
+  content: attr(data-text);
+  position: absolute; top: 0; left: 0;
+  width: 100%; height: 100%;
+}
+.glitch-text::before {
+  color: var(--accent2);
+  clip-path: polygon(0 0, 100% 0, 100% 35%, 0 35%);
+  animation: glitch1 5s infinite;
+  transform: translateX(-2px);
+}
+.glitch-text::after {
+  color: var(--accent);
+  clip-path: polygon(0 65%, 100% 65%, 100% 100%, 0 100%);
+  animation: glitch2 5s infinite;
+  transform: translateX(2px);
+}
+@keyframes glitch1 {
+  0%, 90%, 100% { transform: translateX(-2px); opacity: 0; }
+  91% { transform: translateX(-4px); opacity: 1; }
+  93% { transform: translateX(2px); opacity: 1; }
+  95% { transform: translateX(-2px); opacity: 0; }
+}
+@keyframes glitch2 {
+  0%, 88%, 100% { transform: translateX(2px); opacity: 0; }
+  89% { transform: translateX(4px); opacity: 1; }
+  91% { transform: translateX(-2px); opacity: 1; }
+  93% { transform: translateX(2px); opacity: 0; }
+}
+
+/* ─── Buttons ─── */
+.btn-primary {
+  background: var(--accent);
+  color: #000;
+  border: 2px solid var(--accent);
+  padding: 16px 36px;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s, background 0.2s, color 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  font-weight: 700;
+  border-radius: 0;
+}
+[data-theme="light"] .btn-primary {
+  color: #ffffff;
+}
+.btn-primary:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 3px 3px 0 var(--accent2);
+}
+.btn-ghost {
+  border: 2px solid var(--border);
+  color: var(--text);
+  background: none;
+  padding: 16px 36px;
+  font-family: var(--font-mono);
+  font-size: 15px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: border-color 0.2s, color 0.2s, background 0.2s;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 0;
+  font-weight: 500;
+}
+.btn-ghost:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: rgba(37, 99, 235, 0.05);
+}
+[data-theme="dark"] .btn-ghost:hover {
+  background: rgba(232, 255, 59, 0.05);
+}
+
+/* ─── Skill level bars ─── */
+.skill-level-bar {
+  margin-top: 16px;
+  height: 2px;
+  background: var(--border);
+  position: relative;
+  overflow: hidden;
+}
+.skill-level-fill {
+  height: 100%;
+  background: var(--accent);
+  transition: width 1.2s ease;
+}
+
+/* ─── Scroll indicator ─── */
+@keyframes scrollLine {
+  0% { height: 0; opacity: 0; }
+  50% { height: 48px; opacity: 1; }
+  100% { height: 0; opacity: 0; }
+}
+
+/* ─── Status dot pulse ─── */
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.8); }
+}
+
+/* ─── Responsive ─── */
+@media (max-width: 768px) {
+  body { cursor: auto; }
+  .cursor-dot, .cursor-ring { display: none; }
+}
