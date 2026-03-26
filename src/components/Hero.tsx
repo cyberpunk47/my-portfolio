@@ -98,8 +98,7 @@ export default function Hero() {
                             background: "var(--surface)",
                         }}
                     >
-                        {/* Replace with: <img src="/photo.jpg" alt="Yasir Hameed" style={{ width: "100%", height: "100%", objectFit: "cover" }} /> */}
-                        <User size={64} style={{ color: "var(--accent)" }} />
+                    <img src="/picture.jpeg" alt="Yasir Hameed" style={{ width: "100%", height: "100%", objectFit: "cover" }} />
                     </div>
                 </motion.div>
 

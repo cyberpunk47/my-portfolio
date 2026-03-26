@@ -100,7 +100,7 @@ export default function About() {
                                 { label: "Degree", value: "B.Tech CS" },
                                 { label: "University", value: "LPU, India" },
                                 { label: "Focus", value: "Backend / SDE" },
-                                { label: "Goal", value: "Top Tech Internship" },
+                                { label: "Goal", value: "Game Developer" },
                             ].map(({ label, value }) => (
                                 <div
                                     key={label}
