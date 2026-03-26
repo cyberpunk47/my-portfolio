@@ -63,26 +63,25 @@ export default function About() {
                         style={{ display: "flex", flexDirection: "column", gap: "20px" }}
                     >
                         <p style={{ fontSize: "19px", lineHeight: 1.8, color: "var(--muted)" }}>
-                            Hey, I'm <strong style={{ color: "var(--text)" }}>Yasir Hameed</strong> — a third-year CS
-                            undergrad who'd rather <strong style={{ color: "var(--text)" }}>build a system from scratch</strong> than
-                            follow a tutorial. I think in <strong style={{ color: "var(--text)" }}>algorithms</strong>, dream
-                            in <strong style={{ color: "var(--text)" }}>architecture diagrams</strong>, and ship code that
-                            actually runs in production.
+                            I'm <strong style={{ color: "var(--text)" }}>Yasir Hameed</strong>, a third-year Computer Science
+                            undergraduate with a strong foundation in{" "}
+                            <strong style={{ color: "var(--text)" }}>data structures, algorithms, and system design</strong>.
+                            I enjoy solving complex problems and turning ideas into production-ready software.
                         </p>
                         <p style={{ fontSize: "19px", lineHeight: 1.8, color: "var(--muted)" }}>
-                            My arena? <strong style={{ color: "var(--text)" }}>Codeforces and LeetCode</strong> — not for
-                            the ratings, but because every hard problem I crack makes me a sharper engineer.
-                            150+ problems solved, and counting. My weapon of choice
-                            is <strong style={{ color: "var(--text)" }}>C++</strong>, but I've shipped real-world apps
-                            with <strong style={{ color: "var(--text)" }}>Python, PHP, Laravel, React, and Spring Boot</strong>.
+                            I actively practice competitive programming on{" "}
+                            <strong style={{ color: "var(--text)" }}>Codeforces and LeetCode</strong> with 150+ problems
+                            solved. My primary language is{" "}
+                            <strong style={{ color: "var(--text)" }}>C++</strong>, and I have hands-on experience building
+                            applications with{" "}
+                            <strong style={{ color: "var(--text)" }}>Python, PHP, Laravel, React, and Spring Boot</strong>.
                         </p>
                         <p style={{ fontSize: "19px", lineHeight: 1.8, color: "var(--muted)" }}>
-                            I don't chase buzzwords — I chase <strong style={{ color: "var(--text)" }}>depth</strong>. Every
-                            project I touch goes from idea to deployment. Whether it's an{" "}
-                            <strong style={{ color: "var(--text)" }}>AI chatbot handling finance queries</strong>, a{" "}
-                            <strong style={{ color: "var(--text)" }}>real-time security logger for Linux</strong>, or a{" "}
-                            <strong style={{ color: "var(--text)" }}>cloud infrastructure on AWS</strong> — I build things
-                            that work at scale, not just in a sandbox.
+                            My projects span a range of domains — from an{" "}
+                            <strong style={{ color: "var(--text)" }}>AI-powered finance chatbot</strong> and a{" "}
+                            <strong style={{ color: "var(--text)" }}>real-time Linux security logger</strong> to{" "}
+                            <strong style={{ color: "var(--text)" }}>cloud infrastructure deployed on AWS</strong>. I
+                            focus on writing clean, scalable code and taking every project from concept to deployment.
                         </p>
 
                         {/* Info grid */}
