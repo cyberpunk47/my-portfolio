@@ -63,7 +63,7 @@ export default function About() {
                         style={{ display: "flex", flexDirection: "column", gap: "20px" }}
                     >
                         <p style={{ fontSize: "19px", lineHeight: 1.8, color: "var(--muted)" }}>
-                            Hey, I'm <strong style={{ color: "var(--text)" }}>Yasir Hameed</strong> — a second-year CS
+                            Hey, I'm <strong style={{ color: "var(--text)" }}>Yasir Hameed</strong> — a third-year CS
                             undergrad who'd rather <strong style={{ color: "var(--text)" }}>build a system from scratch</strong> than
                             follow a tutorial. I think in <strong style={{ color: "var(--text)" }}>algorithms</strong>, dream
                             in <strong style={{ color: "var(--text)" }}>architecture diagrams</strong>, and ship code that

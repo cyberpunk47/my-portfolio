@@ -116,7 +116,7 @@ export default function Hero() {
                         lineHeight: 1.8,
                     }}
                 >
-                    Second-year CS student with{" "}
+                    Third-year CS student with{" "}
                     <span style={{ color: "var(--text)" }}>152+ problems solved</span> on LeetCode,{" "}
                     <span style={{ color: "var(--text)" }}>5 projects</span> across full-stack, cloud,
                     and systems, and a{" "}
