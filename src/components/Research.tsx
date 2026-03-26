@@ -31,7 +31,7 @@ export default function Research() {
               marginBottom: "12px",
             }}
           >
-            06 / Research
+            05 / Research
           </p>
           <h2
             style={{

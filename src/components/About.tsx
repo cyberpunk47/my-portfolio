@@ -30,7 +30,7 @@ export default function About() {
                             marginBottom: "12px",
                         }}
                     >
-                        07 / About
+                        06 / About
                     </p>
                     <h2
                         style={{

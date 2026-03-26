@@ -6,7 +6,7 @@ type NavbarProps = {
   toggleDarkMode: () => void
 }
 
-const navLinks = ["Skills", "Projects", "Stats", "Certifications", "Experience", "Research", "About", "Contact"]
+const navLinks = ["Skills", "Projects", "Stats", "Certifications", "Research", "About", "Contact"]
 
 export default function Navbar({ darkMode, toggleDarkMode }: NavbarProps) {
   const [scrolled, setScrolled] = useState(false)

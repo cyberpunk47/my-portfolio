@@ -41,7 +41,7 @@ export default function Contact() {
                 marginBottom: "12px",
               }}
             >
-              08 / Contact
+              07 / Contact
             </p>
             <h2
               style={{
