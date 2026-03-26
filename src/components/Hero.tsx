@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { Github, Linkedin, ExternalLink, Download, User } from "lucide-react"
+import { Github, Linkedin, ExternalLink, Download } from "lucide-react"
 import { SiCodeforces, SiLeetcode } from "react-icons/si"
 import { socialLinks } from "../data"
 import { useCodeForces } from "../hooks/useCodeforces"
