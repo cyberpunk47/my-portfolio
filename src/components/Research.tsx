@@ -1,5 +1,5 @@
 import { motion } from "framer-motion"
-import { FileText } from "lucide-react"
+import { FileText, Download } from "lucide-react"
 import { research } from "../data"
 
 export default function Research() {
@@ -188,6 +188,97 @@ export default function Research() {
                     {kw}
                   </span>
                 ))}
+              </div>
+
+              {/* Paper Preview + Download */}
+              <div
+                style={{
+                  paddingLeft: "40px",
+                  marginTop: "32px",
+                  display: "flex",
+                  gap: "32px",
+                  alignItems: "flex-start",
+                  flexWrap: "wrap",
+                }}
+              >
+                {/* Preview Snapshot */}
+                <a
+                  href="/Researchpaper.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{
+                    display: "block",
+                    width: "220px",
+                    border: "1px solid var(--border)",
+                    borderRadius: "4px",
+                    overflow: "hidden",
+                    transition: "transform 0.3s, box-shadow 0.3s",
+                    flexShrink: 0,
+                  }}
+                  onMouseEnter={e => {
+                    e.currentTarget.style.transform = "translateY(-4px)"
+                    e.currentTarget.style.boxShadow = "0 8px 32px rgba(0,0,0,0.3)"
+                  }}
+                  onMouseLeave={e => {
+                    e.currentTarget.style.transform = "translateY(0)"
+                    e.currentTarget.style.boxShadow = "none"
+                  }}
+                >
+                  <img
+                    src="/research-preview.png"
+                    alt="Research paper preview"
+                    style={{
+                      width: "100%",
+                      height: "auto",
+                      display: "block",
+                    }}
+                  />
+                </a>
+
+                {/* Download Button */}
+                <div style={{ display: "flex", flexDirection: "column", gap: "12px", justifyContent: "center" }}>
+                  <p
+                    style={{
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "13px",
+                      color: "var(--muted)",
+                      letterSpacing: "1px",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    Full Paper (PDF)
+                  </p>
+                  <a
+                    href="/Researchpaper.pdf"
+                    download
+                    className="hoverable"
+                    style={{
+                      display: "inline-flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      padding: "14px 28px",
+                      border: "1px solid var(--accent)",
+                      color: "var(--accent)",
+                      fontFamily: "var(--font-mono)",
+                      fontSize: "14px",
+                      letterSpacing: "2px",
+                      textTransform: "uppercase",
+                      textDecoration: "none",
+                      transition: "background 0.3s, color 0.3s",
+                    }}
+                    onMouseEnter={e => {
+                      e.currentTarget.style.background = "var(--accent)"
+                      e.currentTarget.style.color = "var(--bg)"
+                    }}
+                    onMouseLeave={e => {
+                      e.currentTarget.style.background = "transparent"
+                      e.currentTarget.style.color = "var(--accent)"
+                    }}
+                  >
+                    <Download size={16} />
+                    Download Paper
+                  </a>
+                </div>
               </div>
             </motion.div>
           ))}
